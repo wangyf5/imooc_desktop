@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data</title>
+    <style type="text/css">
+        table{
+            width: 200px;
+            height: 150px;
+            margin: 0 auto;
+            border: 1px solid black;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid black;
+
+        }
+        .log_back{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Id</td>
+        <td>Website</td>
+        <td>Email</td>
+    </tr>
+    <tr>
+        <td>
+            <a href="http://localhost:8080/{{.Id}}">{{.Id}}</a>
+        </td>
+        <td>
+            <a href="http://localhost:8080/{{.Website}}">{{.Website}}</a>
+        </td>
+        <td>
+            <a href="http://localhost:8080/{{.Email}}">{{.Email}}</a>
+        </td>
+    </tr>
+</table>
+<br>
+    <form class="log_back" name="log" action="/login" method="post">
+        <input type="submit" value="返回">
+    </form>
+</body>
+</html>
